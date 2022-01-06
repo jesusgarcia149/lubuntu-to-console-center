@@ -82,7 +82,7 @@ cd
 cd .config
 cd lxsession
 cd Lubuntu
-echo 'lutris' > autostart
+echo 'lutris %U' > autostart
 
 
 
@@ -91,8 +91,11 @@ echo 'lutris' > autostart
 sudo apt-get remove lubuntu* -y
 sudo apt-get autoremove --purge -y
 # En caso que te hallas quedado sin servidor grafico
-sudo apt install xorg -y
+sudo apt-get install xorg -y
 
+
+# Almacenamos los paquetes del escritorio de Lubuntu para hacer Configuraciones mas Adelante
+sudo apt-get install lubuntu-desktop --download-only -y
 
 
 # Reiniciamos
